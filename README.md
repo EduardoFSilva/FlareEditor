@@ -42,7 +42,7 @@ composer install
 <br>
 
 #### 4.   Edite as configurações no arquivo .env de acordo com seu banco de dados. Siga os passos abaixos para um dos softwares de banco de dados. 
-Caso não tenha nenhum instalado e deseja somente testar a aplicao siga a configuração por SQLite
+Caso não tenha nenhum instalado e deseja somente testar a aplicação siga a configuração por SQLite. Caso deseje utilizar em produção é recomendavel se instalar o MySQL ou outro software de banco de dados suportado pelo Laravel.
 
 #### 4.1 **Configuração SQLite**
 
