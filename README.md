@@ -1,66 +1,162 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![LogoFlare](https://raw.githubusercontent.com/EduardoFSilva/FlareEditor/main/public/img/logo-flare.png)
 
-## About Laravel
+</div>
+<br>
+<h4 align="center">Site web de edição de mensagens de emails comerciais</h4>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<hr/>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<div align="center">
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[![Bootstrap](https://img.shields.io/badge/Bootstrap%204.6-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![Laravel](https://img.shields.io/badge/laravel%208.75-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
+[![MySQL](https://img.shields.io/badge/MySQL%20>=5.7-008CC1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)
+[![PHP](https://img.shields.io/badge/php%207.3.31-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
+[![XAMPP](https://img.shields.io/badge/xampp%207.3.31-F54A2A?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/pt_br/index.html)
 
-## Learning Laravel
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# **Requisitos Minimos**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+*   Composer 2.1.9
+*   NPM 6.14 ou superior
+*   Apache 2.4
+*   PHP 7.3
+*   MySQL Server 5.7 ou superior
 
-## Laravel Sponsors
+# **Instalação**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+#### 1.   Clone o repositório para uma pasta vazia utilizando o comando abaixo
+```bash
+git clone https://github.com/EduardoFSilva/FlareEditor.git .
+```
+#### 2.   Rode o comando de instalação do composer para baixar as dependencias
+```bash
+composer install
+```
+#### 3.   Faça uma cópia do arquivo **.env.example** e a renomeie para **.env**
+<br>
 
-## Contributing
+#### 4.   Edite as configurações no arquivo .env de acordo com seu banco de dados. Siga os passos abaixos para um dos softwares de banco de dados. 
+Caso não tenha nenhum instalado e deseja somente testar a aplicao siga a configuração por SQLite
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### 4.1 **Configuração SQLite**
 
-## Code of Conduct
+##### 4.1.1 Copie o arquivo **empty.db** e o renomeie para **flareeditor.db**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+##### 4.1.2 Configure o arquivo .env de acordo com o abaixo
 
-## Security Vulnerabilities
+```ini
+DB_CONNECTION=sqlite
+DB_HOST=
+DB_PORT=
+DB_DATABASE=./flareeditor.db
+DB_USERNAME=
+DB_PASSWORD=
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### 4.2 **Configuração MySQL**
+<br>
 
-## License
+##### 4.2.1 Abra seu sistema gerenciador de banco dados de preferencia e crie um esquema com o nome **flareeditor**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##### 4.2.2 Caso prefira utilizar a linha de comando use o seguinte comando:
+
+```bash
+  mysql -h localhost -P 3306 -u root -p
+```
+No MySQL por padrão o host será localhost, a porta será 3306 e usuário e senha serão root, mas podem variar de máquina para máquina
+
+##### 4.2.3 Configure o arquivo .env de acordo com o abaixo
+
+```ini
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=flareeditor
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+OBS: Se você estiver utilzando o XAMPP a senha será vazia
+
+#### 5.    Gere a chave da aplicação utilizando o comando abaixo
+```bash
+  php artisan key:generate
+```
+#### 6.    Execute o comando para gerar a estrutura de banco de dados
+```bash
+  php artisan migrate
+```
+# **Execução**
+## Método 1. Laravel Development Server
+1. Abra o terminal na pasta do projeto e execute o comando abaixo
+```bash
+    php artisan serve
+```
+2. Acesse a URL abaixo em seu navegador
+```
+    http://localhost:8000
+```
+
+## Método 2. Configuração De Virtual Host No Apache
+1. Na pasta onde o Apache está instalado, abra o arquivo <span>**/**</span>**conf/httpd.conf** e adicione acima da diretiva **Listen 80** ou **Listen 127.0.0.1:80** o comando Listen para um endereço local que esteja livre como no exemplo abaixo e salve as alterações:
+```markdown
+# Endereço Flare Editor
+Listen 127.0.0.2:80
+# Endereços Padrao
+Listen 127.0.0.1:80 
+Listen 80 
+```
+2. Na pasta onde o Apache está instalado, abra o arquivo <span>**/**</span>**conf/extra/httpd-vhosts.conf** e adicione o virtual host de acordo com as regras abaixo:
+* O Endereço em frente a **VirtualHost** deve ser o mesmo que o configurado em **httpd.conf**
+* **DocumentRoot** deve aponta para a pasta public do projeto. (Nota: para usuários de Windows substitua a **\\** por **/**)
+* **ServerName** deve ser uma URL que não esteja "ocupada", como por exemplo **flare.editor.local/**
+#### Exemplo de VirtualHost
+```
+<VirtualHost 127.0.0.5:80>
+    DocumentRoot "C:/xampp/htdocs/FlareEditor"
+    ServerName flare.editor.local
+</VirtualHost>
+```
+
+3. Abra o arquivo hosts de seu sistema operacional
+#### Localização de arquivo de hosts
+###### **Windows:** C:\Windows\System32\drivers\etc\hosts
+###### **MacOS/Linux:** <span>/</span>etc/hosts
+###### `Nota: Privilégios administrativos são requeridos para se editar este arquivo`
+<br>
+
+4. Adicione a linha como a do exemplo no fim do arquivo seguindos as regras
+* **Primeiro valor**: deve ser igual ao endereço IP de seu Virtual Host
+* **Segundo valor**: deve ser igual ao ***ServerName*** de seu Virtual Host
+#### Exemplo de configuração de arquivo hosts
+```
+ 127.0.0.5    flare.editor.local
+```
+
+
+5.    Inicie seu servidor apache e acesse o endereço configurado no arquivo hosts e ServerName.
+#### Exemplo de endereço web de desenvolvimento
+```
+http://flare.editor.local/
+```
+`Nota: Para as proximas execuções só é necessário que o servidor apache esteja em execução para que o endereço de desenvolvimento fique disponível`
+
+# **Construido Com**
+* [Admin LTE](https://adminlte.io/)
+* [Bootstrap](https://getbootstrap.com)
+* [CodeMirror](https://codemirror.net/)
+* [DataTables](https://datatables.net/)
+* [FontAwesome](https://fontawesome.com/)
+* [Laravel](https://laravel.com/)
+* [MySQL](https://www.mysql.com)
+* [PHP](https://www.php.net)
+* [Summernote](https://summernote.org/)
+* [XAMPP](https://www.apachefriends.org/pt_br/index.html)
+
+# **Autor**
+* Eduardo Fernandes Silva
+
