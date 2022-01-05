@@ -36,7 +36,7 @@ class ModeloController extends Controller
             return redirect()->back();
         }else{
             $textInput = $modelo->conteudo;
-            $pattern = "/({'[a-z\X+\.?]+'})/mi"; // Formato {'variavel'} aceita pontos para separar variaveis
+            $pattern = "/({'[a-z+\.?]+'})/mi"; // Formato {'variavel'} aceita pontos para separar variaveis
             $repPatt = "/{|}|'/mi"; //Regex de remoção de chaves e aspas simples
             $matches = []; // Array de seleção de chaves pelo preg_match_all
             preg_match_all($pattern,$textInput,$matches);

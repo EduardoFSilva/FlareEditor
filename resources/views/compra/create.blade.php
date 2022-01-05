@@ -21,7 +21,7 @@ $menuSelectPath = ['categ' => 'registros', 'submenu' => 'compra'];
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="clienteId">Código De Rastreamento <code>*</code></label>
+                                    <label for="clienteId">Cliente <code>*</code></label>
                                     <select class="form-control flareeditor-input-orange" id="clienteId" name="clienteId">
                                         @foreach ($clientes as $cliente)
                                             <option value="{{ $cliente->id }}">{{ $cliente->nome." ".$cliente->sobrenome }}</option>
@@ -31,7 +31,7 @@ $menuSelectPath = ['categ' => 'registros', 'submenu' => 'compra'];
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="remessaId">Tipo <code>*</code></label>
+                                    <label for="remessaId">Remessa <code>*</code></label>
                                     <select class="form-control flareeditor-input-orange" id="remessaId" name="remessaId">
                                         @foreach ($remessas as $remessa)
                                             <option value="{{ $remessa->id }}">{{ $remessa->codigoRastreamento."  (".$remessa->rastreamento->nomeEmpresa.")" }}</option>
