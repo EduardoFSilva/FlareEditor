@@ -1,0 +1,18 @@
+.flareeditor-sidebar{
+    background-color: #ff4500;
+    color: white;
+}
+
+
+.flareeditor-navbar-orange{
+    background-color: #d2691e;
+}
+.flareeditor-navbar-bottom-border{
+  border-bottom-color: transparent;   
+}
+
+.flareeditor-control-sidebar-glass{
+    background-color: #212529;
+    background-color: #212529cc;
+    backdrop-filter: blur(10px);
+}

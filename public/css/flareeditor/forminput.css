@@ -1,0 +1,15 @@
+.flareeditor-input-orange{
+    color: #0969A2;
+    border-color: #0969A2;
+}
+.flareeditor-input-orange::placeholder{
+    color: #4F92BA;
+}
+.flareeditor-input-orange:focus{
+    color: #ff4500;
+    border-color: #ff8c00;
+}
+
+.flareeditor-input-orange::placeholder:focus{
+    color: #0969A2;
+}

@@ -1,0 +1,26 @@
+body{
+    background-image: url('/img/login-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    overflow-y:hidden;
+}
+  
+.flareeditor-board-bg{
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 1em;
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+
+.flareeditor-btn-spc{
+    margin-top: 3em;
+}
+
+.flareeditor-text-orange{
+    color: #ff4500;
+}

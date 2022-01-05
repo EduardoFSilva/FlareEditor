@@ -1,0 +1,66 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('editor');
+});
+
+
+
+Route::any('/receber', function (Request $request) {
+    $textInput = $request->input("rawHtml");
+    dd($textInput);
+    $pattern = "/({'[a-z\X+\.?]+'})/mi"; // Formato {'variavel'} aceita pontos para separar variaveis
+    $repPatt = "/{|}|'/mi"; //Regex de remoção de chaves e aspas simples
+    $matches = []; // Array de seleção de chaves pelo preg_match_all
+    //Hardcode de teste
+    $replacers = [
+        "cliente.primeironome" => "Eduardo",
+        "cliente.nomecompleto" => "Eduardo Fernandes Silva",
+        "cliente.email" => "cliente@provedor.com",
+        "produto.descricao" => "Produto Genérico",
+        "produto.preco" => "R$200,00",
+        "produto.quantidade" => "2",
+        "produto.link.rast" => "link rastreamento",
+        "produto.link.prod" => "link produto",
+        "produto.pais" => "Brasil",
+        "vendedor.nome"=>"Loja Genérica Nº 1"
+    ];
+    //Preg Match
+    preg_match_all($pattern,$textInput,$matches);
+    //Copia do Texto Recebido No Request Para processamento
+    $proc = $textInput;
+    /*Percorrendo array matches
+    Key = Indice do array
+    Value = chave da variavel a ser substituida */
+    foreach ($matches[0] as $key => $value) {
+        /* Percorrendo array de hardcoded replaces 
+        chave = chave da variavel a ser substituida
+        valor = valor que será posto no local da variavel
+        */
+        foreach($replacers as $chave => $valor){
+            //Se o lowercase de valor for igual a chave
+            if(str_contains(mb_strtolower($value, "UTF-8"), $chave)){
+                //Altere
+                $proc = str_replace($value,$valor,$proc);
+            }
+        }
+    }
+    echo"<html><head><meta charset='UTF-8'><title>Teste</title></head><body><div style='width: 50%; background-color: #ddd; margin: auto; padding: 10px; border-radius: 5px;'>";
+    echo $proc;
+    echo "</div></body></html>";
+})->name("receber");
