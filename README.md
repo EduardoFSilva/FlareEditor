@@ -34,9 +34,11 @@
 ```bash
 git clone https://github.com/EduardoFSilva/FlareEditor.git .
 ```
-#### 2.   Rode o comando de instalação do composer para baixar as dependencias
+#### 2.   Rode os comandos de instalação do composer e NPM para baixar as dependencias
 ```bash
 composer install
+npm install
+npm run dev
 ```
 #### 3.   Faça uma cópia do arquivo **.env.example** e a renomeie para **.env**
 <br>
