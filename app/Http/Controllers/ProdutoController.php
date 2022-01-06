@@ -106,7 +106,7 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $produto = Produto::find($ids)->with(['vendedor'])->get()[0];
+        $produto = Produto::find($id)->with(['vendedor'])->get()[0];
        if($produto == null){
            return redirect()->back();
        }else{
